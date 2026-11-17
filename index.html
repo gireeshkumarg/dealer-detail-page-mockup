@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dealer page mockup – Cubix Marketing | BuildingWorld</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;color:#1c2430;background:#f6f7f9;line-height:1.5}
+a{color:#0f5c5a;text-decoration:none}a:hover{color:#0a3f3d;text-decoration:underline}
+h1,h2,h3,p{margin:0}
+.banner{background:#fff4d6;color:#5c4400;font-size:13px;padding:10px 24px;text-align:center;border-bottom:1px solid #f0dca0}
+.topbar{background:#fff;border-bottom:1px solid #e3e6ea}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.topbar .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.logo{font-size:20px;font-weight:700;color:#1c2430;letter-spacing:-.01em}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:20px;font-size:14px}
+.nav .muted{color:#4a5461}
+.btn-dark{padding:10px 18px;border-radius:8px;background:#1c2430;color:#fff;font-weight:600}
+.btn-dark:hover{color:#fff;text-decoration:none}
+main{padding-top:24px;padding-bottom:56px;display:flex;flex-direction:column;gap:24px}
+.crumbs{font-size:13px;color:#4a5461;display:flex;flex-wrap:wrap;gap:8px}
+.crumbs .cur{color:#1c2430;font-weight:500}
+.card{background:#fff;border:1px solid #e3e6ea;border-radius:16px}
+.pad{padding:28px}
+.stack{display:flex;flex-direction:column}
+.g12{gap:12px}.g14{gap:14px}.g16{gap:16px}
+.hero{overflow:hidden}
+.hero-top{display:flex;flex-wrap:wrap}
+.hero-img{flex:1 1 320px;min-height:260px;background:#e8ebef;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:#4a5461;font-size:14px}
+.hero-body{flex:1.5 1 480px;padding:32px;display:flex;flex-direction:column;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 12px;border-radius:999px;background:#eef0f3;color:#2d3744;font-size:13px}
+.chip.main{background:#e3f1ef;color:#0a3f3d;font-weight:600}
+h1{font-size:36px;line-height:1.15;letter-spacing:-.02em}
+h2{font-size:22px;letter-spacing:-.01em}
+.side h2{font-size:20px}
+.lead{font-size:17px;line-height:1.55;color:#2d3744}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.b{padding:14px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid #c9cfd6;background:#fff;color:#1c2430}
+.b.primary{background:#0f5c5a;border-color:#0f5c5a;color:#fff}
+.b.outline{border-color:#0f5c5a;color:#0f5c5a}
+.b:hover{text-decoration:none}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;padding:0 24px;border-top:1px solid #e3e6ea}
+.tab{padding:14px 18px;border:0;border-bottom:3px solid transparent;background:transparent;font:500 15px 'Inter',system-ui,sans-serif;color:#4a5461;cursor:pointer}
+.tab[aria-pressed="true"]{font-weight:600;color:#0f5c5a;border-bottom-color:#0f5c5a}
+.layout{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.main{flex:999 1 600px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.side{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.side .card{padding:24px}
+body.js .panel{display:none;flex-direction:column;gap:24px}
+body.js .panel.active{display:flex}
+body:not(.js) .panel{display:flex;flex-direction:column;gap:24px}
+.body-text{font-size:16px;line-height:1.65;color:#2d3744}
+.note{font-size:14px;color:#4a5461}
+.small{font-size:13px;color:#4a5461}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.label{font-size:13px;color:#4a5461;display:block}
+.val{font-size:15px;font-weight:600}
+.faq h3{font-size:16px;margin-bottom:4px}
+.faq p{font-size:15px;line-height:1.6;color:#2d3744}
+.ph{height:170px;border-radius:12px;background:#e8ebef;display:flex;align-items:center;justify-content:center;color:#4a5461;font-size:13px}
+.map{height:260px;text-align:center;padding:12px}
+.brandcard h3{font-size:19px}
+.brandcard .head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.prod{padding:14px;border-radius:12px;border:1px solid #e3e6ea;display:flex;flex-direction:column;gap:4px;color:#1c2430}
+.prod b{font-weight:600;font-size:14px;line-height:1.4}
+.prod span{font-size:13px;color:#4a5461}
+.prod:hover{text-decoration:none;border-color:#0f5c5a}
+.row{display:flex;justify-content:space-between;font-size:15px}
+.nb{padding:14px;border-radius:12px;border:1px solid #e3e6ea;display:flex;flex-direction:column;gap:2px;color:#1c2430}
+.nb b{font-weight:600;font-size:15px}.nb span{font-size:13px;color:#4a5461}
+.nb:hover{text-decoration:none;border-color:#0f5c5a}
+footer{background:#1c2430;color:#d5dae0;font-size:14px}
+footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+footer a{color:#d5dae0;margin-left:20px}
+footer strong{color:#fff}
+@media (max-width:640px){h1{font-size:28px}.grid2,.grid3{grid-template-columns:1fr}.pad{padding:20px}}
+</style>
+</head>
+<body>
+<div class="banner">Design mockup for internal review. Text in [brackets] is a placeholder, not real data. Not for indexing.</div>
+
+<div class="topbar"><div class="wrap">
+<a class="logo" href="#">BuildingWorld</a>
+<div class="nav"><span class="muted">All India</span><a href="#">Brands</a><a href="#">Professionals</a><a class="btn-dark" href="#">Login</a></div>
+</div></div>
+
+<main class="wrap">
+
+<nav class="crumbs" aria-label="Breadcrumb">
+<a href="#">Home</a><span aria-hidden="true">/</span><a href="#">Dealers</a><span aria-hidden="true">/</span><a href="#">Chennai</a><span aria-hidden="true">/</span><span class="cur">Cubix Marketing</span>
+</nav>
+
+<!-- HERO -->
+<header class="card hero">
+<div class="hero-top">
+<div class="hero-img">Store photo<br>[from Google Maps, where available]</div>
+<div class="hero-body">
+<div class="chips">
+<span class="chip main">Dealer / Store</span>
+<span class="chip">[Area], Chennai</span>
+<span class="chip">[Open until HH:MM]</span>
+<span class="chip">[Rating] · [No.] Google reviews</span>
+</div>
+<h1>Cubix Marketing</h1>
+<p class="lead">Dealer of <a href="brand.html">Acoustical Surfaces</a> and [number] other brands in [Area], Chennai.</p>
+<div class="actions">
+<a class="b primary" href="#">Call [phone number]</a>
+<a class="b outline" href="#">WhatsApp</a>
+<a class="b" href="#" data-goto="contact">Get directions</a>
+</div>
+</div>
+</div>
+<div class="tabs" role="group" aria-label="Dealer sections">
+<button class="tab" type="button" data-tab="overview" aria-pressed="true">Overview</button>
+<button class="tab" type="button" data-tab="brands" aria-pressed="false">Brands &amp; products</button>
+<button class="tab" type="button" data-tab="photos" aria-pressed="false">Photos</button>
+<button class="tab" type="button" data-tab="contact" aria-pressed="false">Contact &amp; location</button>
+</div>
+</header>
+
+<div class="layout">
+<div class="main">
+
+<!-- NOTE: every panel is in the HTML. JavaScript only hides/shows them, so a crawler or a visitor without JS sees all content. -->
+
+<!-- OVERVIEW -->
+<div class="panel active" id="overview" data-panel="overview">
+<section class="card pad stack g12">
+<h2>About Cubix Marketing</h2>
+<p class="body-text">Cubix Marketing is a dealer and store in [Area], Chennai. It is listed on BuildingWorld as a dealer of Acoustical Surfaces, [Brand 2] and [Brand 3], covering [product categories]. Visit the store at [street address] or contact it by phone or WhatsApp.</p>
+</section>
+<section class="card pad stack g16">
+<h2>At a glance</h2>
+<div class="grid2">
+<div><span class="label">Type</span><span class="val">Dealer / Store</span></div>
+<div><span class="label">Area</span><span class="val">[Area], Chennai, Tamil Nadu</span></div>
+<div><span class="label">Brands carried</span><span class="val">[Number] brands</span></div>
+<div><span class="label">Categories</span><span class="val">[Category 1], [Category 2]</span></div>
+<div><span class="label">Opening hours</span><span class="val">[HH:MM – HH:MM]</span></div>
+<div><span class="label">Google rating</span><span class="val">[Rating] ([No.] reviews)</span></div>
+</div>
+</section>
+<section class="card pad stack g12 faq">
+<h2>Frequently asked questions</h2>
+<div class="stack g16">
+<div><h3>Which brands does Cubix Marketing carry?</h3><p>Cubix Marketing lists Acoustical Surfaces, [Brand 2] and [Brand 3] on BuildingWorld.</p></div>
+<div><h3>Where is Cubix Marketing located?</h3><p>The store is at [street address], [Area], Chennai [pincode].</p></div>
+<div><h3>How can I contact Cubix Marketing?</h3><p>Call [phone number] or message the store on WhatsApp from this page.</p></div>
+</div>
+</section>
+</div>
+
+<!-- BRANDS & PRODUCTS -->
+<div class="panel" id="brands" data-panel="brands">
+<section class="card pad stack" style="gap:6px">
+<h2>Brands at Cubix Marketing</h2>
+<p class="note" style="font-size:15px;line-height:1.6">Brand details below come from each brand's official website and are the same for every dealer. Ask the store for availability, sizes and pricing.</p>
+</section>
+
+<section class="card pad stack g14 brandcard">
+<div class="head"><h3>Acoustical Surfaces</h3><a href="brand.html" style="font-size:14px;font-weight:600">View brand page</a></div>
+<p style="font-size:15px;line-height:1.6;color:#2d3744">[Short brand description, taken from the official brand website]</p>
+<div class="chips"><span class="chip">[Product category 1]</span><span class="chip">[Product category 2]</span><span class="chip">[Product category 3]</span></div>
+<span style="font-size:13px;font-weight:600;color:#2d3744">Brand range · ask the store about availability</span>
+<div class="grid2" style="gap:12px">
+<a class="prod" href="brand.html"><b>Acoustical Surfaces Foam Sheets – Polyurethane Foam</b><span>From ₹50/sq.ft (brand listing)</span></a>
+<a class="prod" href="brand.html"><b>Acoustical Surface Echo Eliminator – Bonded Acoustical Cotton</b><span>From ₹65/sq.ft (brand listing)</span></a>
+</div>
+<span class="small">Source: [Official brand website name]</span>
+</section>
+
+<section class="card pad stack g14 brandcard">
+<div class="head"><h3>[Brand 2]</h3><a href="#" style="font-size:14px;font-weight:600">View brand page</a></div>
+<p style="font-size:15px;line-height:1.6;color:#2d3744">[Short brand description, taken from the official brand website]</p>
+<div class="chips"><span class="chip">[Product category 1]</span><span class="chip">[Product category 2]</span></div>
+<span style="font-size:13px;font-weight:600;color:#2d3744">Brand range · ask the store about availability</span>
+<div class="grid2" style="gap:12px">
+<a class="prod" href="#"><b>[Product name]</b><span>[Price, if listed]</span></a>
+<a class="prod" href="#"><b>[Product name]</b><span>[Price, if listed]</span></a>
+</div>
+<span class="small">Source: [Official brand website name]</span>
+</section>
+
+<section class="card pad stack g14 brandcard">
+<div class="head"><h3>[Brand 3]</h3><a href="#" style="font-size:14px;font-weight:600">View brand page</a></div>
+<p style="font-size:15px;line-height:1.6;color:#2d3744">[Short brand description, taken from the official brand website]</p>
+<div class="chips"><span class="chip">[Product category 1]</span><span class="chip">[Product category 2]</span></div>
+<span style="font-size:13px;font-weight:600;color:#2d3744">Brand range · ask the store about availability</span>
+<div class="grid2" style="gap:12px">
+<a class="prod" href="#"><b>[Product name]</b><span>[Price, if listed]</span></a>
+<a class="prod" href="#"><b>[Product name]</b><span>[Price, if listed]</span></a>
+</div>
+<span class="small">Source: [Official brand website name]</span>
+</section>
+</div>
+
+<!-- PHOTOS -->
+<div class="panel" id="photos" data-panel="photos">
+<section class="card pad stack g16">
+<h2>Photos of Cubix Marketing</h2>
+<div class="grid3">
+<div class="ph">[Photo 1]</div><div class="ph">[Photo 2]</div><div class="ph">[Photo 3]</div>
+<div class="ph">[Photo 4]</div><div class="ph">[Photo 5]</div><div class="ph">[Photo 6]</div>
+</div>
+<p class="note">Source: Google Maps. This tab is hidden when a dealer has no photos.</p>
+</section>
+</div>
+
+<!-- CONTACT & LOCATION -->
+<div class="panel" id="contact" data-panel="contact">
+<section class="card pad stack g16">
+<h2>Location</h2>
+<div class="ph map">Map<br>[Google Maps link or embed]</div>
+<p style="font-size:15px;line-height:1.6;color:#2d3744">[Street address], [Area], Chennai, Tamil Nadu [pincode]</p>
+<h3 style="font-size:17px;margin-top:8px">Location served</h3>
+<p style="font-size:15px;line-height:1.6;color:#2d3744">Serves [Area], [Nearby area] and other parts of Chennai.</p>
+</section>
+<section class="card pad stack g12">
+<h2>Opening hours</h2>
+<div class="row"><span>Monday – Saturday</span><span>[HH:MM – HH:MM]</span></div>
+<div class="row"><span>Sunday</span><span>[HH:MM – HH:MM]</span></div>
+</section>
+</div>
+
+</div>
+
+<!-- SIDEBAR (always visible) -->
+<aside class="side">
+<section class="card stack g14">
+<h2>Contact</h2>
+<div><span class="label">Address</span><span style="font-size:15px">[Street address], [Area], Chennai [pincode]</span></div>
+<div><span class="label">Phone</span><a href="#" style="font-size:15px;font-weight:600">[Phone number]</a></div>
+<div><span class="label">Website</span><a href="#" style="font-size:15px">[Website, if available]</a></div>
+</section>
+<section class="card stack g14">
+<h2>Other Acoustical Surfaces dealers in Chennai</h2>
+<a class="nb" href="#"><b>[Nearby dealer 1]</b><span>[Area] · [distance]</span></a>
+<a class="nb" href="#"><b>[Nearby dealer 2]</b><span>[Area] · [distance]</span></a>
+<a class="nb" href="#"><b>[Nearby dealer 3]</b><span>[Area] · [distance]</span></a>
+</section>
+</aside>
+</div>
+</main>
+
+<footer><div class="wrap">
+<strong>BuildingWorld</strong>
+<div><a href="#">Home</a><a href="#">Videos</a><a href="#">Brands</a><a href="#">Professionals</a></div>
+</div></footer>
+
+<script>
+(function () {
+  document.body.classList.add('js');
+  var tabs = document.querySelectorAll('[data-tab]');
+  var panels = document.querySelectorAll('[data-panel]');
+  function show(id) {
+    var found = false;
+    panels.forEach(function (p) { if (p.dataset.panel === id) found = true; });
+    if (!found) id = 'overview';
+    panels.forEach(function (p) { p.classList.toggle('active', p.dataset.panel === id); });
+    tabs.forEach(function (t) { t.setAttribute('aria-pressed', t.dataset.tab === id ? 'true' : 'false'); });
+  }
+  tabs.forEach(function (t) { t.addEventListener('click', function () { show(t.dataset.tab); history.replaceState(null, '', '#' + t.dataset.tab); }); });
+  document.querySelectorAll('[data-goto]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); show(a.dataset.goto); history.replaceState(null, '', '#' + a.dataset.goto); }); });
+  show(location.hash.replace('#', '') || 'overview');
+})();
+</script>
+</body>
+</html>
